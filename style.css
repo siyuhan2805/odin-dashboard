@@ -7,6 +7,7 @@
        --background-sidebar: rgba(17, 18, 20);
        --background-main: rgba(17, 18, 20);
        --background-card: rgba(25, 26, 28);
+       --background-btn: rgba(42, 43, 47);
 
        /* Font styles */
        --sidebar-link-style: 300;
@@ -58,7 +59,7 @@ body {
 }
 
 /*********************/
-/* SIDEBAR CONTAINER */
+/* SIDEBAR CLASSES   */
 /*********************/
 
 .sidebar {
@@ -107,6 +108,58 @@ body {
 .lower-menu > div:last-child {
     margin-bottom: 0;
 }
+
+/*********************/
+/* HEADER CLASSES    */
+/*********************/
+
+/* SEARCHBAR */
+
+.header {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr ;
+    padding: 2.4rem 3.2rem;
+}
+
+.searchbar {
+    width: 700px;
+}
+
+form {
+    background-color: var(--background-main);
+    padding: 1.4rem 1.6rem;
+    border-radius: 1.2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+
+form > button {
+    border: none;
+    background-color: transparent;
+}
+
+
+form > input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: var(--sidebar-link-size);
+    color: var(--section-heading-color);
+}
+
+form > input:focus {
+    outline: none;
+}
+
+/* ACCOUNT */
+
+.account {
+    display: flex;
+    justify-content: right;
+}
+
+
 
 
 
