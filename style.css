@@ -11,18 +11,25 @@
 
        /* Font styles */
        --sidebar-link-style: 300;
+       --sidebar-heading-style: 400;
+       --header-profile-link-style: 500;
 
        /* Font-sizes */
        --sidebar-title-size: 4.0rem;
        --sidebar-link-size: 1.8rem;
+       --header-profile-size: 1.6rem;
+       --header-welcome-size: 1.6rem;
+       --header-profile-link-size: 1.8rem;
+       --share-btn-size: 1.6rem;
        
    
        /* Font-colors */
        --main-heading-color: rgba(254, 255, 255);
-       --section-heading-color: rgba(253, 254, 255);
+       --section-heading-color: rgba(246, 247, 249);
        --sidebar-heading-color: rgba(116, 118, 119);
 
        /* Border-colors */
+       --sidebar-border: rgba(36, 38, 39);
 }
 
 /* APPLY PAGE RESET */
@@ -40,11 +47,12 @@ html {
 /* STYLING */
 body {
     font-family: "Roboto", sans-serif;
-    color: var(--main-heading-color);
+    color: var(--section-heading-color);
     margin: 0 auto;
     background-color: var(--background-body);
     height: 100vh;
     overflow: hidden;
+
 
 }
 
@@ -55,6 +63,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
+    grid-template-rows: 200px 1fr;
     height: 100%;
 }
 
@@ -67,12 +76,14 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding: 2.4rem 5%;
+    padding: 2.4rem 7%;
     background-color: var(--background-sidebar);
+    border-right: 2px solid var(--sidebar-border);
 }
 
 .sidebar > h1 {
     font-size: var(--sidebar-title-size);
+    font-weight: var(--sidebar-heading-style);
     margin-bottom: 10%;
 }
 
@@ -117,7 +128,8 @@ body {
 
 .header {
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr ;
+    grid-template: 5rem 5rem / 1fr 1fr ;
+    row-gap: 4.8rem;
     padding: 2.4rem 3.2rem;
 }
 
@@ -157,7 +169,94 @@ form > input:focus {
 .account {
     display: flex;
     justify-content: right;
+    align-items: center;
+    gap: 1.2rem;
 }
+
+.account-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: .4rem;
+}
+
+.account-profile {
+    border-radius: 50%;
+    width: 3.2rem;
+    height: 3.2rem;
+
+}
+
+.account > p {
+    font-size: var(--header-profile-size);
+    font-weight: var(--sidebar-link-style);
+}
+
+/* WELCOME */
+.welcome {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.welcome > img {
+    border-radius: 50%;
+    width: 5.2rem;
+    height: 5.2rem;
+}
+
+.welcome-text {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    gap: .6rem;
+}
+
+.welcome-greeting {
+    font-size: var(--header-profile-size);
+    font-weight: var(--sidebar-link-style);
+}
+
+.welcome-user {
+    font-size: var(--header-profile-link-size);
+    font-weight: var(--header-profile-link-style);
+}
+
+/* SHARE BUTTONS */
+
+.share-btns {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.btn {
+    width: auto;
+    height: 3.6rem;
+    background-color: var(--background-btn);
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    font-size: var(--share-btn-size);
+    font-weight: var(--sidebar-link-style);
+    color: var(--main-heading-color);
+}
+
+/************************/
+/* MAIN-CONTENT CLASSES */
+/************************/
+
+.main-content {
+    grid-area: 2 / 2 / -1 / -1; 
+    padding: 2.4rem 3.2rem;
+}
+
+.content-container {
+    background-color: var(--background-main);
+    border: 1px solid var(--background-main);
+    border-radius: 1.2rem;
+    height: 100%;
+}
+
 
 
 
