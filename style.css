@@ -2,36 +2,34 @@
 /* ROOT CSS SELECTORS*/
 
 :root {
-       /* Background colours */
-       --background-body: rgba(20, 21, 23);
-       --background-sidebar: rgba(17, 18, 20);
-       --background-main: rgba(17, 18, 20);
-       --background-card: rgba(25, 26, 28);
-       --background-btn: rgba(42, 43, 47);
+    /* --- 01 TYPOGRAPHY SYSTEM */
+    /* FONT STYLES */
+    --light: 300;
+    --default: 400;
+    --bold: 500;
 
-       /* Font styles */
-       --sidebar-link-style: 300;
-       --sidebar-heading-style: 400;
-       --header-profile-link-style: 500;
-       --main-heading-style: 400;
+    /* FONT SIZES  */
+    --main-heading-size: 4.0rem;
+    --secondary-heading-size: 2.0rem;
+    --tertiary-heading-size: 1.8rem;
+    --link-heading-size: 1.6rem;
 
-       /* Font-sizes */
-       --sidebar-title-size: 4.0rem;
-       --sidebar-link-size: 1.8rem;
-       --header-profile-size: 1.6rem;
-       --header-welcome-size: 1.6rem;
-       --header-profile-link-size: 1.8rem;
-       --share-btn-size: 1.6rem;
-       --main-heading-size: 2rem;
-       
-   
-       /* Font-colors */
-       --main-heading-color: rgba(254, 255, 255);
-       --section-heading-color: rgba(246, 247, 249);
-       --sidebar-heading-color: rgba(116, 118, 119);
+    /* --- 02 COLOUR SYSTEM */
+    /* PRIMARY */
+    --primary-dark-colour: rgba(20, 21, 23);
+    --primary-light-colour: rgba(254, 255, 255);
 
-       /* Border-colors */
-       --sidebar-border: rgba(36, 38, 39);
+    /* TINTS */
+    --tint-dark-colour: rgba(17, 18, 20);
+    --tint-light-colour: rgba(246, 247, 249);
+
+    /* SHADES */
+    --shade-card-colour: rgba(25, 26, 28);
+    --shade-btn-colour: rgba(42, 43, 47);
+
+    /* GREYS */
+    --grey-contrast-colour: rgba(116, 118, 119);
+    --grey-border-colour: rgba(36, 38, 39);
 }
 
 /* APPLY PAGE RESET */
@@ -49,9 +47,9 @@ html {
 /* STYLING */
 body {
     font-family: "Roboto", sans-serif;
-    color: var(--section-heading-color);
+    color: var(--tint-light-colour);
     margin: 0 auto;
-    background-color: var(--background-body);
+    background-color: var(--primary-dark-colour);
     height: 100vh;
     overflow: hidden;
 
@@ -79,13 +77,13 @@ body {
     flex-direction: column;
     height: 100vh;
     padding: 2.4rem 7%;
-    background-color: var(--background-sidebar);
-    border-right: 2px solid var(--sidebar-border);
+    background-color: var(--tint-dark-colour);
+    border-right: 2px solid var(--grey-border-colour);
 }
 
 .sidebar > h1 {
-    font-size: var(--sidebar-title-size);
-    font-weight: var(--sidebar-heading-style);
+    font-size: var(--secondary-heading-size);
+    font-weight: var(--default);
     margin-bottom: 10%;
 }
 
@@ -109,9 +107,9 @@ body {
 
 .menu-bar > div > div > a {
     text-decoration: none;
-    font-size: var(--sidebar-link-size);
-    font-weight: var(--sidebar-link-style);
-    color: var(--sidebar-heading-color);
+    font-size: var(--tertiary-heading-size);
+    font-weight: var(--light);
+    color: var(--grey-contrast-colour);
 }
 
 .upper-menu > div:last-child {
@@ -140,7 +138,7 @@ body {
 }
 
 form {
-    background-color: var(--background-main);
+    background-color: var(--tint-dark-colour);
     padding: 1.4rem 1.6rem;
     border-radius: 1.2rem;
     display: flex;
@@ -158,8 +156,8 @@ form > input {
     border: none;
     background-color: transparent;
     width: 100%;
-    font-size: var(--sidebar-link-size);
-    color: var(--section-heading-color);
+    font-size: var(--tertiary-heading-size);
+    color: var(--tint-light-colour);
 }
 
 form > input:focus {
@@ -189,8 +187,8 @@ form > input:focus {
 }
 
 .account > p {
-    font-size: var(--header-profile-size);
-    font-weight: var(--sidebar-link-style);
+    font-size: var(--link-heading-size);
+    font-weight: var(--light);
 }
 
 /* WELCOME */
@@ -213,13 +211,13 @@ form > input:focus {
 }
 
 .welcome-greeting {
-    font-size: var(--header-profile-size);
-    font-weight: var(--sidebar-link-style);
+    font-size: var(--link-heading-size);
+    font-weight: var(--light);
 }
 
 .welcome-user {
-    font-size: var(--header-profile-link-size);
-    font-weight: var(--header-profile-link-style);
+    font-size: var(--tertiary-heading-size);
+    font-weight: var(--bold);
 }
 
 /* SHARE BUTTONS */
@@ -234,13 +232,13 @@ form > input:focus {
 .btn {
     width: auto;
     height: 3.6rem;
-    background-color: var(--background-btn);
+    background-color: var(--shade-btn-colour);
     border: none;
     border-radius: 1rem;
     padding: 1rem 2rem;
-    font-size: var(--share-btn-size);
-    font-weight: var(--sidebar-link-style);
-    color: var(--main-heading-color);
+    font-size: var(--link-heading-size);
+    font-weight: var(--light);
+    color: var(--primary-light-colour);
 }
 
 /************************/
@@ -253,13 +251,13 @@ form > input:focus {
 }
 
 .content-container {
-    background-color: var(--background-main);
-    border: 1px solid var(--background-main);
+    background-color: var(--tint-dark-colour);
+    border: 1px solid var(--tint-dark-colour);
     border-radius: 1.2rem;
     height: 100%;
     padding: 3.2rem 1.2rem;
     display: grid;
-    grid-template-columns: 4fr 1fr
+    grid-template-columns: 3fr 1fr
 }
 
 .projects {
@@ -269,8 +267,8 @@ form > input:focus {
 }
 
 .project-heading {
-    font-size: var(--main-heading-size);
-    font-weight: var(--main-heading-style);
+    font-size: var(--secondary-heading-size);
+    font-weight: var(--default);
     margin-bottom: 1.2rem
 }
 
@@ -282,8 +280,12 @@ form > input:focus {
 }
 
 .card {
-    background-color: var(--background-card);
+    background-color: var(--shade-card-colour);
+    display: flex;
+    flex-direction: column;
 }
+
+.card > 
 
 
 
