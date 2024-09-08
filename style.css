@@ -51,7 +51,7 @@ body {
     margin: 0 auto;
     background-color: var(--primary-dark-colour);
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 
 
 }
@@ -257,7 +257,8 @@ form > input:focus {
     height: 100%;
     padding: 3.2rem 1.2rem;
     display: grid;
-    grid-template-columns: 3fr 1fr
+    grid-template-columns: 3fr 1fr;
+    column-gap: 2.2rem;
 }
 
 .projects {
@@ -283,9 +284,113 @@ form > input:focus {
     background-color: var(--shade-card-colour);
     display: flex;
     flex-direction: column;
+    padding:  2rem 7%;
+    border-radius: 1.2rem;
+    border: 1px solid var(--grey-border-colour);
+    position: relative;
+   
 }
 
-.card > 
+.card > h3 {
+    font-size: var(--tertiary-heading-size);
+    font-weight: var(--default);
+    margin-bottom: .6rem;
+}
+
+.card > p {
+    font-size: var(--link-heading-size);
+    font-weight: var(--light);
+    margin-bottom: 1.2rem;
+}
+
+.card > div {
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: right;
+}
+
+/************************/
+/* ANNOUNCEMENT CLASSES */
+/************************/
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements-heading {
+    font-size: var(--secondary-heading-size);
+    font-weight: var(--default);
+    margin-bottom: 1.2rem;
+}
+
+.announcements-container {
+    background-color: var(--shade-card-colour);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 7%;
+    border-radius: 1.2rem;
+    border: 1px solid var(--grey-border-colour);
+}
+
+.announcements-container > hr {
+    display: block;
+    margin: 1.6rem 0; 
+}
+
+.announcement > h3 {
+    font-size: var(--link-heading-size);
+    font-weight: var(--default);
+    margin-bottom: .4rem;
+}
+
+.announcement > p {
+    font-size: 1.4rem;
+    font-weight: var(--light);
+}
+
+/********************/
+/* TRENDING CLASSES */
+/********************/
+
+.trending {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-heading {
+    font-size: var(--secondary-heading-size);
+    font-weight: var(--default);
+    margin-bottom: 1.2rem;
+}
+
+.trending-container {
+    background-color: var(--shade-card-colour);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 7%;
+    border-radius: 1.2rem;
+    border: 1px solid var(--grey-border-colour);
+    gap: 1.6rem;
+}
+
+.trend {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+}
+
+.trend h3 {
+    font-size: 1.4rem;
+    margin-bottom: .6rem;
+}
+
+.trend p {
+    font-size: 1.4rem;
+}
 
 
 
