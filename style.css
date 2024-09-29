@@ -51,9 +51,6 @@ body {
     margin: 0 auto;
     background-color: var(--primary-dark-colour);
     height: 100vh;
-    /* overflow: hidden; */
-
-
 }
 
 /********************/
@@ -67,18 +64,20 @@ body {
     height: 100%;
 }
 
+
 /*********************/
 /* SIDEBAR CLASSES   */
 /*********************/
 
 .sidebar {
-    grid-area: 1 / 1 / -3 / 2;
+    /* grid-area: 1 / 1 / -3 / 2; */
     display: flex;
     flex-direction: column;
     height: 100vh;
     padding: 2.4rem 7%;
     background-color: var(--tint-dark-colour);
     border-right: 2px solid var(--grey-border-colour);
+    overflow: hidden;
 }
 
 .sidebar > h1 {
@@ -248,17 +247,18 @@ form > input:focus {
 .main-content {
     grid-area: 2 / 2 / -1 / -1; 
     padding: 2.4rem 3.2rem;
+    overflow-y: auto;
 }
 
 .content-container {
     background-color: var(--tint-dark-colour);
     border: 1px solid var(--tint-dark-colour);
     border-radius: 1.2rem;
-    height: 100%;
     padding: 3.2rem 1.2rem;
     display: grid;
     grid-template-columns: 3fr 1fr;
     column-gap: 2.2rem;
+    row-gap: 2.2rem;
 }
 
 .projects {
